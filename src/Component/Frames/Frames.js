@@ -2,12 +2,13 @@ import React from 'react';
 import frame1 from '../../Asset/frame1.jpg';
 import frame2 from '../../Asset/frame2.jpg';
 import frame3 from '../../Asset/frame3.jpg';
-
+import line from '../../Asset/title-line.png';
 const Frames = () => {
     return (
         <div className='font-serif mt-3 bg-white '>
             <h1 className='text-6xl text-center text-primary'>FRAMES</h1>
             <p className='text-center text-gray-400'>Buy One Which You Like Most</p>
+            <img src={line} alt="" className='items-center mx-auto' />
             {/* <div className='grid lg:grid-cols-2 my-10'>
                 <div>
          
@@ -56,14 +57,14 @@ const Frames = () => {
               alt=""
             />
             <img
-              className="object-cover w-20 h-20 rounded  sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+              className="object-cover w-35 h-35 rounded  sm:h-32 xl:h-40 sm:w-32 xl:w-40"
               src={frame2}
               alt=""
             />
           </div>
           <div className="px-3">
             <img
-              className="object-cover w-40 h-40 rounded sm:h-64 xl:h-80 sm:w-64 xl:w-80"
+              className="object-cover w-45 h-45 rounded sm:h-64 xl:h-80 sm:w-64 xl:w-80"
               src={frame1}
               alt=""
             />

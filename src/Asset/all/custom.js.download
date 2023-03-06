@@ -31,7 +31,7 @@ jQuery(document).ready(function($){
 	// <select>	
 	$("select").each(function(){
 		if($(this).css('display') != 'none') {
-			$(this).wrap( '<div class="selection-box"></div>' );
+			$(this).wrap( '<div className="selection-box"></div>' );
 		}
 	});
 
@@ -264,13 +264,13 @@ jQuery(document).ready(function($){
 					deeplinking: false
 				});
 			} else {
-				$('#ajax_load_gallery').html('<span class="fa fa-picture-o"></span>No More Posts Found<i class="load-icon"></i>');
+				$('#ajax_load_gallery').html('<span className="fa fa-picture-o"></span>No More Posts Found<i className="load-icon"></i>');
 				$('#ajax_load_gallery').attr('disabled', 'disabled');
 			}
 			$('#ajax_load_gallery').removeClass('loading');
          },
 		 error: function (jqXHR, textStatus, errorThrown) {
-			$('#ajax_load_gallery').html('<span class="fa fa-picture-o"></span>No More Posts Found<i class="load-icon"></i>');
+			$('#ajax_load_gallery').html('<span className="fa fa-picture-o"></span>No More Posts Found<i className="load-icon"></i>');
 		 }
       });
 	  return false;

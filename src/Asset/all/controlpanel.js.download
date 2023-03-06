@@ -25,25 +25,25 @@ for(var i=0; i<$color.length; i++){
 }
 
 $str = '<!-- **DT Style Picker Wrapper** -->';
-$str += '<div class="dt-style-picker-wrapper">';
-$str += '	<a href="" title="" class="style-picker-ico"> <i class="fa fa-paint-brush"></i> </a>';
+$str += '<div className="dt-style-picker-wrapper">';
+$str += '	<a href="" title="" className="style-picker-ico"> <i className="fa fa-paint-brush"></i> </a>';
 $str += '	<div id="dt-style-picker">';
 $str += '   	<h2> Select Your Style </h2>';
 $str += '       <h3> Choose your Scheme </h3>';
-$str += '		<ul class="scheme-picker">';
-$str += '       	<li> <a id="dark" href="" title="" class="selected"> <img src="' + dttheme_urls.theme_base_url + '/images/style-picker/dark.png" alt="Dark" width="39" height="10" /> </a> </li>';
+$str += '		<ul className="scheme-picker">';
+$str += '       	<li> <a id="dark" href="" title="" className="selected"> <img src="' + dttheme_urls.theme_base_url + '/images/style-picker/dark.png" alt="Dark" width="39" height="10" /> </a> </li>';
 $str += '       	<li> <a id="light" href="" title=""> <img src="' + dttheme_urls.theme_base_url + '/images/style-picker/light.png" alt="Light" width="41" height="11" /> </a> </li>';
 $str += '		</ul>';
-$str += '		<div class="hr"> </div>';
+$str += '		<div className="hr"> </div>';
 $str += '		<div id="pattern-holder" style="display:none;">';
 $str +='			<h3> Patterns for Boxed Layout </h3>';
-$str += '			<ul class="pattern-picker">';
+$str += '			<ul className="pattern-picker">';
 $str += 				$patterns;
 $str += '			</ul>';
-$str += '			<div class="hr"> </div>';
+$str += '			<div className="hr"> </div>';
 $str += '		</div>';
 $str += '		<h3> Color scheme </h3>';
-$str += '		<ul class="color-picker">';
+$str += '		<ul className="color-picker">';
 $str += 		$colors;
 $str += '		</ul>';
 $str += '	</div>';

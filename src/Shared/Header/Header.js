@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider';
 import logo from '../../Asset/logo1.png';
+import './Header.css';
+import { FaAddressBook, FaAddressCard, FaMarker, FaPhone } from "react-icons/fa";
 
 const Header = () => {
   const { user, LogOut } = useContext(AuthContext);
@@ -17,28 +19,31 @@ const Header = () => {
           .catch(err => console.log(err));
   }
 
-  const menuItems = <React.Fragment className="font-serif">
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/blog">Blog</Link></li>
-      <li><Link to="/blog">Shop</Link></li>
- 
-      
+  const menuItems = <React.Fragment >
+      <li><Link to="/" >Home</Link></li>
+      {/* <li><Link to="/blog" >Blog</Link></li> */}
+      <li><Link to="/shop" >Shop</Link></li>
+      <li><Link to="/dashboard" >Dashboard</Link></li>
 
       
       {user?.uid ?
           <>
-              <li><Link to="/dashboard">Dashboard</Link></li>
-              <li><button onClick={handleLogOut}>Sign out</button></li>
+              
+              <li><button onClick={handleLogOut} >Sign out</button></li>
           </>
           : <li><Link to="/login">Login</Link></li>}
          
   </React.Fragment>
     return (
-<div className='nav'>
-    <p className='bg-black text-white text-center text-xs py-2 '>
+<div className='shadow-md'>
+   
+
+       <p className='bg-black text-white text-center text-xs  uppercase py-3  '>
     <marquee className = "marquee" behavior="scroll" direction="left">
-            Deal Done: Bilon moves from TV Producer to Junior Web Developer</marquee> </p>
-<div className='sm:max-w-xl md:max-w-full lg:max-w-full justify-center rounded-md  '> 
+    Buy Art, Frame ,Show-Piece Please Contact with us   <FaPhone className='inline'></FaPhone>  +880 123 456 789  <FaAddressBook className='inline'></FaAddressBook>  Chittagong , Bangladesh </marquee>
+             </p>
+
+<div className=' sm:max-w-xl md:max-w-full lg:max-w-screen-xl justify-center rounded-md  '> 
   
   <div className="navbar flex justify-between text-black transparent  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl  ">
     

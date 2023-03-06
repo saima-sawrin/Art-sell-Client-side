@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
-import { AuthContext } from '../../../context/AuthProvider';
+import { AuthContext } from '../../context/AuthProvider';
 
 const Modal = ({p}) => {
     const{user} = useContext(AuthContext);
@@ -29,7 +29,7 @@ const Modal = ({p}) => {
       }
 
 
-      fetch('https://sellArt-server-side-saima-sawrin.vercel.app/bookings', {
+      fetch('https://art-selling-server-side.vercel.app/booking', {
           method: 'POST',
           headers: {
               'content-type': 'application/json'
@@ -61,9 +61,9 @@ const Modal = ({p}) => {
     <h3 className="font-bold text-lg">Please Fill up the form for Book Products</h3>
     <form onSubmit={handleBooking} className='grid grid-cols-1 gap-3 mt-10'>
     {/* USER NAME */}
-    <input type="text" name="userName" id="disabled-input-2" aria-label="disabled input 2" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value={user?.displayName || 'not set yet'} disabled readOnly/>
+    <input type="text" name="userName" id="disabled-input-2"placeholder='Enter Your Name' aria-label="disabled input 2" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value={user?.displayName }  required/>
     {/* USER EMAIL */}
-    <input type="text" name='email' id="disabled-input-2" aria-label="disabled input 2" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value={user?.email} required />
+    <input type="text" name='email' id="disabled-input-2" placeholder='Enter Your Email'aria-label="disabled input 2" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value={user?.email}  />
 
     <input type="text" name='ProductName' id="disabled-input-2" aria-label="disabled input 2" className="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" value={pName} disabled readOnly/>
 
@@ -75,7 +75,7 @@ const Modal = ({p}) => {
 
 
     <div className="modal-action">
-      <label htmlFor="confirm-modal"> <input className='btn btn-accent w-full' type="submit" value="Submit" /></label>
+      <label htmlFor="confirm-modal"> <input className='btn btn-primary text-white w-full' type="submit" value="Submit" /></label>
   
     </div>
     </form>

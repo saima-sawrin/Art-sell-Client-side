@@ -1,3 +1,6 @@
-.col{
-    background-image:'../../' ;
+.collection{
+
+    background-image: url('../../Asset/bg4.jpg');
+    background-repeat: no-repeat;
+    
 }

@@ -7,48 +7,51 @@ import img4 from '../../Asset/frame-img4.jpg';
 import img5 from '../../Asset/frame-img5.jpg';
 import img6 from '../../Asset/frame-img6.jpg';
 import img7 from '../../Asset/frame-img-7.jpg';
+import line from '../../Asset/title-line.png';
 const Collections = () => {
     return (
-        <div className='col bg-white'>
+        <div className=' col collection '>
         
-            <h1 class="text-center font-bold py-10 text-3xl text-primary uppercase"><span className='text-xs text-black'>EXPLORE OUR</span> <br /> Collection</h1>
-
-<div class="container lg:px-24 px-4 py-8 mx-auto items-center ">
-  <div class="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
-    <div class="w-full col-span-2">
+            <h1 className="text-center font-bold pt-10 text-3xl text-primary uppercase"><span className='text-xs text-black'>EXPLORE OUR</span> <br /> Collection</h1>
+            <p className='text-gray-400 text-center mx-auto'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, officiis beatae.</p>
+        
+            <img src={line} alt="" className='items-center mx-auto' />
+<div className="container lg:px-24 px-4 py-8 mx-auto items-center ">
+  <div className="grid grid-cols-4 grid-rows-4 grid-flow-col gap-2">
+    <div className="w-full col-span-2">
         <img    src={img1} alt="" className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100"/>
      
     </div>
-    <div class="w-full col-span-2 row-span-2">
-        <img  src={img4} alt="" class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+    <div className="w-full col-span-2 row-span-2">
+        <img  src={img4} alt="" className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
 
     </div>
-    <div class="w-full ">
-        <img src={img3} alt=""  class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+    <div className="w-full ">
+        <img src={img3} alt=""  className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
 
     </div>
-    <div class="w-full">
+    <div className="w-full">
         <img src={img5}alt=""
-        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 " />
+        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 " />
       
     </div>
-    <div class="w-full col-span-2 row-span-2">
+    <div className="w-full col-span-2 row-span-2">
       <img
         src={img2}
         alt="Photo by Claudio Schwarz on Unsplash"
-        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
     </div>
    
-    <div class="w-full col-span-2">
+    <div className="w-full col-span-2">
       <img
         src={img6}
-        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
     </div>
-    <div class="w-full col-span-2">
+    <div className="w-full col-span-2">
       <img
         src={img7}
         alt="Photo by Claudio Schwarz on Unsplash"
-        class="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
+        className="inset-0 h-full w-full object-cover object-center rounded opacity-75 hover:opacity-100 "/>
     </div>
    
   </div>
